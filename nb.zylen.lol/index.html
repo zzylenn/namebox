@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namebox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>namebox</h1>
+
+        <div class="generator">
+            <div class="username" id="username"></div>
+
+            <button id="generate">generate</button>
+            <button id="copy">copy</button>
+        </div>
+
+        <div class="settings">
+            <label>
+                <span>max length</span>
+                <input type="number" id="length" min="10" max="50" value="20" onkeyup="enforceMinMax(this)" required>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="numbers" checked>
+                <span>numbers</span>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="underscores" checked>
+                <span>underscores</span>
+            </label>
+        </div>
+    </main>
+
+    <script type="module" src="./generator/script.js"></script>
+</body>
+</html>
